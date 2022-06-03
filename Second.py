@@ -33,31 +33,31 @@ engine.setProperty('voice', voices[i].id)
 engine.say("Thank you for choosing me.")
 engine.runAndWait()
 while inp!="stop":
-    inp=str(raw_input("What would you like me to do sir? "))
+    inp=input("What would you like me to do sir? ")
     inp=inp.split(" ")
     if(inp[0].lower()=="wikipedia"):
         c=""
         for i in range(1,len(inp)):
             c=c+" "+inp[i]
-        print "Searching"
+        print("Searching")
         l=wikipedia.search(c.lstrip(" "))
         for j in range(len(l)):
-            print j,l[j]
+            print(j,l[j])
         c=int(input())
         r=wikipedia.page(l[c])
-        print r.summary
+        print(r.summary)
         webbrowser.open(r.url)
         #for j in search(c.lstrip(" "),tld="co.in",num=1,stop=1,pause=2):
-        #    print webbrowser.open(j)
+        #    print(webbrowser.open(j))
             #engine.say(t.summary)
             #engine.runAndWait()
     if (inp[0].lower() == "google"):
         c = ""
         for i in range(1, len(inp)):
             c = c + " " + inp[i]
-        print "Searching"
+        print("Searching")
         for j in search(c.lstrip(" "),num=1,stop=1,pause=2):
-            print j
+            print(j)
             webbrowser.open(j)
             try:
                 j=str(j[30:])
@@ -68,7 +68,7 @@ while inp!="stop":
                     else:
                         c=c+" "
                 r=wikipedia.page(c)
-                print r.summary
+                print(r.summary)
                 engine.say(r.summary)
                 engine.runAndWait()
             except:
@@ -77,12 +77,12 @@ while inp!="stop":
         c = ""
         for i in range(1, len(inp)):
             c = c + " " + inp[i]
-        print "Searching for",c.lstrip(" ")
+        print("Searching for",c.lstrip(" "))
         c="C:\\Users\\ANKIT\\Desktop\\"+c.lstrip(" ")
         #subprocess.Popen([c,'-new-tab'])
         try:
             os.startfile(c)
         except:
-            print "I can't find that file. Did you put the right extension?"
+            print("I can't find that file. Did you put the right extension?")
             c="C:\\Users\\ANKIT\\Desktop\\"+raw_input("Maybe type the filename with extension: ")
             os.startfile(c)
