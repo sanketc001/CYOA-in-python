@@ -16,8 +16,8 @@ import cv2
 import pyautogui
 import numpy as np
 import matplotlib.pyplot as plt
-from skimage.metrics import structural_similarity as ssim
-from skimage.metrics import mean_squared_error as mse
+#from skimage.metrics import structural_similarity as ssim
+#from skimage.metrics import mean_squared_error as mse
 import googlemaps
 from datetime import datetime
 import PIL.Image
