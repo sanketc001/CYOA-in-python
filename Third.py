@@ -43,7 +43,7 @@ def asciiart():
     print(asciiimg)
 #asciiart()
 def mapping():
-    gmaps = googlemaps.Client(key='AIzaSyCR1YVndr9SfMY9KFpneIhbiet2QEGrVCo')
+    gmaps = googlemaps.Client(key='API key')
     geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
     reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
     now = datetime.now()
@@ -229,7 +229,7 @@ while inp!="stop":
             city_name=r.recognize_google(audio)
 
             # Enter your API key here
-            api_key = '313fc6e74e0f9ae6a92dfb9daf6a5123'
+            api_key = 'API key'
 
             # base_url variable to store url
             base_url = "http://api.openweathermap.org/data/2.5/weather?"
