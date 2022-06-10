@@ -15,10 +15,10 @@ def weather():
     ob=v.weather_at_place("London,uk")
     c=ob.get_weather()
     print(c.get_wind())
-print(d.values())
 weather()
 d=PyDictionary()
-print(os.path.abspath("C:\Users\ANKIT\Desktop"))
+print(d.values())
+print(os.path.abspath("C:\\Users\\ANKIT\\Desktop"))
 listener = sr.Recognizer()
 r = sr.Recognizer()
 with sr.Microphone() as source:
